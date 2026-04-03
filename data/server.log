@@ -1,0 +1,143 @@
+2026-04-03 09:17:32 | DEBUG    | pipecat.transports.smallwebrtc.connection:281 | Initializing new peer connection
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:368 | Creating answer
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:350 | Track audio received
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:346 | ICE gathering state is gathering
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:346 | ICE gathering state is complete
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:371 | Setting the answer after the local description is created
+2026-04-03 09:17:33 | DEBUG    | pipecat.audio.vad.silero:147 | Loading Silero VAD model...
+2026-04-03 09:17:33 | DEBUG    | pipecat.audio.vad.silero:169 | Loaded Silero VAD
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking Pipeline#0::Source -> SmallWebRTCInputTransport#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking SmallWebRTCInputTransport#0 -> ElevenLabsRealtimeSTTService#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking ElevenLabsRealtimeSTTService#0 -> OpenAIUserContextAggregator#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking OpenAIUserContextAggregator#0 -> OpenAILLMService#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking OpenAILLMService#0 -> ElevenLabsTTSService#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking ElevenLabsTTSService#0 -> SmallWebRTCOutputTransport#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking SmallWebRTCOutputTransport#0 -> OpenAIAssistantContextAggregator#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking OpenAIAssistantContextAggregator#0 -> Pipeline#0::Sink
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking PipelineTask#0::Source -> RTVIProcessor#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking RTVIProcessor#0 -> Pipeline#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.processors.frame_processor:589 | Linking Pipeline#0 -> PipelineTask#0::Sink
+2026-04-03 09:17:33 | DEBUG    | pipecat.pipeline.runner:71 | Runner PipelineRunner#0 started running PipelineTask#0
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:340 | ICE connection state is checking, connection is connecting
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:541 | Monitoring connecting state
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:617 | Connection state changed to: connecting
+2026-04-03 09:17:33 | DEBUG    | pipecat.pipeline.task:745 | PipelineTask#0: Starting. Waiting for StartFrame#0 to reach the end of the pipeline...
+2026-04-03 09:17:33 | DEBUG    | pipecat.audio.vad.vad_analyzer:156 | Setting VAD params to: confidence=0.7 start_secs=0.2 stop_secs=0.7 min_volume=0.6
+2026-04-03 09:17:33 | INFO     | pipecat.transports.smallwebrtc.transport:462 | Connecting to Small WebRTC
+2026-04-03 09:17:33 | DEBUG    | pipecat.services.elevenlabs.stt:756 | Connecting to ElevenLabs Realtime STT
+2026-04-03 09:17:33 | DEBUG    | pipecat.transports.smallwebrtc.connection:340 | ICE connection state is completed, connection is connecting
+2026-04-03 09:17:34 | DEBUG    | pipecat.transports.smallwebrtc.connection:561 | Cancelling the connecting timeout task
+2026-04-03 09:17:34 | DEBUG    | pipecat.transports.smallwebrtc.connection:617 | Connection state changed to: connected
+2026-04-03 09:17:34 | DEBUG    | pipecat.transports.smallwebrtc.transport:253 | Peer connection established.
+2026-04-03 09:17:34 | WARNING  | pipecat.transports.smallwebrtc.connection:680 | No video transceiver is available
+2026-04-03 09:17:34 | WARNING  | pipecat.transports.smallwebrtc.connection:702 | No screen video transceiver is available
+2026-04-03 09:17:34 | DEBUG    | pipecat.transports.smallwebrtc.connection:456 | Replacing audio track audio
+2026-04-03 09:17:34 | INFO     | __main__:114 | WebRTC Maya: Client connected
+2026-04-03 09:17:34 | DEBUG    | pipecat.services.elevenlabs.stt:800 | Connected to ElevenLabs Realtime STT
+2026-04-03 09:17:34 | DEBUG    | pipecat.services.elevenlabs.stt:852 | ElevenLabs session started: {'message_type': 'session_started', 'session_id': '87dd373797fc434a9df63cfb2074adc0', 'config': {'sample_rate': 16000, 'audio_format': 'pcm_16000', 'language_code': None, 'timestamps_granularity': 'word', 'vad_commit_strategy': False, 'vad_silence_threshold_secs': 1.5, 'vad_threshold': 0.4, 'min_speech_duration_ms': 100, 'min_silence_duration_ms': 100, 'max_tokens_to_recompute': 5, 'model_id': 'scribe_v2_realtime', 'disable_logging': False, 'include_timestamps': False, 'include_language_detection': False}}
+2026-04-03 09:17:34 | DEBUG    | pipecat.services.elevenlabs.tts:652 | Connecting to ElevenLabs
+2026-04-03 09:17:34 | DEBUG    | pipecat.pipeline.task:748 | PipelineTask#0: StartFrame#0 reached the end of the pipeline, pipeline is now ready.
+2026-04-03 09:17:34 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:34 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:34 | DEBUG    | pipecat.services.openai.base_llm:395 | OpenAILLMService#0: Generating chat from LLM-specific context [{'role': 'system', 'content': "You are Maya, the premium Dyson concierge assistant. Your goal is to provide a sophisticated, helpful, and natural conversational experience.\n\n### Conversational Rules\n- **Concise & Direct**: Spoken responses must be brief (max 2-3 sentences). Avoid long lists.\n- **Summarize Specs**: If a user asks for technical specs, call `search_dyson_knowledge` first, then give a 1-sentence spoken summary of the key benefit (e.g., 'The V15 has incredibly strong suction for deep cleaning'). Do NOT offer to email anything — Maya is a voice assistant only.\n- **Graceful Interruption**: If the user speaks while you are talking, acknowledge their interruption immediately and pivot to their new question. Never ignore them.\n- **No Robotic Repetition**: Vary your greetings and acknowledgments. Avoid saying 'I understand' or 'Certainly' every time.\n- **Proactive Guidance**: Never leave the conversation hanging. After answering a question, always suggest a relevant next step, ask a follow-up question (e.g., 'Would you like to hear about our latest hair-care technology?'), or offer to help with registration.\n- **Handle Ambiguity**: If input is extremely short (1-2 words), nonsensical, or appears to be background noise/chatter, do NOT attempt to interpret or answer it. Instead, gracefully ask the user to repeat (e.g., 'I'm sorry, I didn't quite catch that. Could you repeat it?').\n\n### Knowledge Retrieval — MANDATORY RAG RULE\nYou MUST call `search_dyson_knowledge` BEFORE answering ANY question that touches a Dyson product category or model — including broad overviews like 'Tell me about vacuums' or 'What hair-care products do you have?'. NEVER rely on your own internal training knowledge for: Vacuums, Purifiers, Hair Care, Lighting, or any other Dyson product line. Even if you feel confident about the answer, you MUST call the tool first. If the tool returns no results, say: 'I'm having a little trouble accessing the specific details right now — let me connect you with a specialist who can help.'\n\n### Lead Capture — Sequential Collection Flow\nWhen a user shows purchase interest or requests a callback, you MUST follow this strict three-step flow:\n\n  STEP 1 — Get their NAME\n    Call `capture_lead_interest`. If it asks for a name, ask conversationally and wait.\n\n  STEP 2 — Get their CONTACT DETAILS (Email or Phone)\n    Once the name is known, ask for their phone or email and wait.\n\n  STEP 3 — Get explicit CONSENT\n    Wait for name + contact to be known. `capture_lead_interest` will ask for consent automatically.     If the user says 'YES' to that question, you MUST immediately call `confirm_lead_creation`     with the same `session_id`. When calling this tool, you MUST include a concise 1-2 sentence     summary of the entire conversation in the `conversation_summary` parameter.     DO NOT just acknowledge; call the tool to finalize.\n\n### Tool Rules\n- `search_dyson_knowledge`: MANDATORY for ALL product/category questions. No exceptions.\n- `confirm_lead_creation`: Call IMMEDIATELY when the user says 'YES' after the consent question. Always provide a 1-2 sentence summary of the customer's needs in the `conversation_summary` argument.\n- NEVER answer product questions from memory — always search first.\n- NEVER create a lead for purely informational questions.\n\nGreeting: 'Hello, I'm Maya, your Dyson concierge. How can I assist you today?'\n\n### Session Context\nYour current session_id is: `a6dc41dd`. You MUST pass this exact value as the `session_id` parameter whenever you call `capture_lead_interest` or `confirm_lead_creation`."}, {'role': 'user', 'content': 'Initial greeting.'}]
+2026-04-03 09:17:35 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:143 | OpenAILLMService#0 TTFB: 2.479s
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:196 | OpenAILLMService#0 prompt tokens: 1243, completion tokens: 17
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:231 | ElevenLabsTTSService#0 text aggregation time: 0.027964115142822266
+2026-04-03 09:17:37 | DEBUG    | pipecat.services.elevenlabs.tts:852 | ElevenLabsTTSService#0: Generating TTS [Hello, I'm Maya, your Dyson concierge.]
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:214 | ElevenLabsTTSService#0 usage characters: 38
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:175 | ElevenLabsTTSService#0 processing time: 0.002s
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:175 | OpenAILLMService#0 processing time: 2.616s
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:231 | ElevenLabsTTSService#0 text aggregation time: 0.005841732025146484
+2026-04-03 09:17:37 | DEBUG    | pipecat.services.elevenlabs.tts:852 | ElevenLabsTTSService#0: Generating TTS [How can I assist you today?]
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:214 | ElevenLabsTTSService#0 usage characters: 27
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:175 | ElevenLabsTTSService#0 processing time: 0.001s
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.processors.metrics.frame_processor_metrics:143 | ElevenLabsTTSService#0 TTFB: 0.226s
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.base_output:631 | Bot started speaking
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:37 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:38 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:39 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:39 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:39 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:39 | DEBUG    | pipecat.transports.smallwebrtc.connection:732 | Data channel not ready, queuing message
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | DEBUG    | pipecat.services.tts_service:829 | ElevenLabsTTSService#0 cleaning up TTS context d4cc8d19-ebba-457f-9be5-04fba564f918
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:40 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:41 | DEBUG    | pipecat.transports.base_output:725 | Bot stopped speaking based on TTSStoppedFrame
+2026-04-03 09:17:41 | DEBUG    | pipecat.transports.base_output:659 | Bot stopped speaking
+2026-04-03 09:17:41 | WARNING  | pipecat.transports.smallwebrtc.connection:735 | Message queue is full (50 messages). Discarding message.
+2026-04-03 09:17:44 | WARNING  | pipecat.transports.smallwebrtc.transport:381 | Received an unexpected media stream error while reading the audio.
+2026-04-03 09:17:44 | WARNING  | pipecat.transports.smallwebrtc.connection:582 | Data channel not established within 10s after connection. Clearing message queue and disabling future queueing.
+2026-04-03 09:17:44 | DEBUG    | pipecat.transports.smallwebrtc.connection:355 | Track audio ended
+2026-04-03 09:17:44 | WARNING  | pipecat.transports.smallwebrtc.transport:381 | Received an unexpected media stream error while reading the audio.
+2026-04-03 09:17:44 | DEBUG    | pipecat.transports.smallwebrtc.connection:340 | ICE connection state is closed, connection is closed
+2026-04-03 09:17:44 | DEBUG    | pipecat.transports.smallwebrtc.connection:617 | Connection state changed to: closed
+2026-04-03 09:17:44 | DEBUG    | pipecat.transports.smallwebrtc.transport:263 | Client connection closed.
+2026-04-03 09:17:44 | INFO     | __main__:121 | WebRTC Maya: Client disconnected
+2026-04-03 09:17:48 | WARNING  | src.utils.stats_tracker:37 | StatsTracker: Failed to increment 'total_calls': [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-03 09:17:52 | WARNING  | src.utils.stats_tracker:37 | StatsTracker: Failed to increment 'total_chats': [WinError 10061] No connection could be made because the target machine actively refused it
+2026-04-03 09:17:52 | INFO     | src.bot.sentiment:28 | Sentiment: Starting end-of-call analysis for session a6dc41dd...
+2026-04-03 09:17:52 | DEBUG    | pipecat.pipeline.task:767 | PipelineTask#0: Closing. Waiting for EndFrame#0(reason: None) to reach the end of the pipeline...
+2026-04-03 09:17:52 | DEBUG    | pipecat.transports.smallwebrtc.connection:174 | Disabling receiver for audio track after 8.80s idle
+2026-04-03 09:17:52 | DEBUG    | pipecat.transports.smallwebrtc.connection:143 | Discarding old frames
+2026-04-03 09:17:52 | DEBUG    | pipecat.services.elevenlabs.stt:810 | Disconnecting from ElevenLabs Realtime STT
+2026-04-03 09:17:53 | DEBUG    | pipecat.services.elevenlabs.tts:694 | Disconnecting from ElevenLabs
+2026-04-03 09:17:53 | DEBUG    | pipecat.services.elevenlabs.tts:697 | Disconnected from ElevenLabs
+2026-04-03 09:17:53 | DEBUG    | pipecat.pipeline.task:773 | PipelineTask#0: EndFrame#0(reason: None) reached the end of the pipeline, pipeline is closing.
+2026-04-03 09:17:53 | DEBUG    | pipecat.pipeline.task:621 | Pipeline task PipelineTask#0 is finishing...
+2026-04-03 09:17:53 | DEBUG    | pipecat.pipeline.task:626 | Pipeline task PipelineTask#0 has finished
+2026-04-03 09:17:53 | DEBUG    | pipecat.pipeline.runner:95 | Runner PipelineRunner#0 finished running PipelineTask#0
+2026-04-03 09:17:55 | INFO     | src.bot.sentiment:69 | Sentiment: No product referenced in session a6dc41dd. Ignoring log.
+2026-04-03 09:18:00 | WARNING  | pipecat.pipeline.runner:136 | Interruption detected. Cancelling runner PipelineRunner#0
+2026-04-03 09:18:00 | DEBUG    | pipecat.pipeline.runner:104 | Cancelling runner PipelineRunner#0

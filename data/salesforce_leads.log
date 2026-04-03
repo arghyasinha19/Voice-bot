@@ -1,0 +1,62 @@
+2026-04-02 05:13:31 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=1483a843 intent='purchase_inquiry' name='None None' email='None' phone='None'
+2026-04-02 05:13:32 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=1483a843 → state=need_name
+2026-04-02 05:13:45 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=1483a843 intent='purchase_inquiry' name='Mukesh None' email='None' phone='None'
+2026-04-02 05:13:45 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=1483a843 → state=need_name
+2026-04-02 05:13:57 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=1483a843 intent='purchase_inquiry' name='Mukesh None' email='test@gmail.com' phone='None'
+2026-04-02 05:13:57 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=1483a843 → state=need_name
+2026-04-02 05:14:08 | INFO     | src.salesforce.maya_tool | [confirm_lead_creation] session=1483a843
+2026-04-02 05:14:08 | WARNING  | src.salesforce.maya_tool | [confirm_lead_creation] Name still missing — session=1483a843
+2026-04-02 05:14:27 | DEBUG    | src.salesforce.maya_tool | [clear_session_data] Purging stale lead data for session 1483a843
+2026-04-02 05:41:13 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=e8278cc6 intent='purchase_inquiry' name='Mukesh None' email='None' phone='None'
+2026-04-02 05:41:13 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=e8278cc6 → state=need_contact
+2026-04-02 05:41:27 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=e8278cc6 intent='purchase_inquiry' name='Mukesh None' email='test@gmail.com' phone='None'
+2026-04-02 05:41:27 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=e8278cc6 → state=need_consent
+2026-04-02 05:41:44 | INFO     | src.salesforce.maya_tool | [confirm_lead_creation] session=e8278cc6
+2026-04-02 05:41:44 | INFO     | src.salesforce.lead_manager | LeadManager: Classified intent as 'strong_sales'
+2026-04-02 05:41:44 | INFO     | src.salesforce.lead_manager | LeadManager: Decision → create=True | Strong intent + consent given + minimum data present.
+2026-04-02 05:41:44 | DEBUG    | src.salesforce.lead_manager | LeadManager: Submitting Lead payload: {'LastName': 'Mukesh', 'Company': 'Individual', 'LeadSource': 'Web', 'Status': 'Open - Not Contacted', 'Description': 'Intent: Strong Sales | Summary: My email is test@gmail.com. | Source: Dyson Voice Bot (Maya)', 'Email': 'test@gmail.com'}
+2026-04-02 05:41:44 | INFO     | src.salesforce.client | Salesforce: Authenticating via OAuth 2.0 Client Credentials flow...
+2026-04-02 05:41:45 | SUCCESS  | src.salesforce.client | Salesforce: Authenticated successfully. Instance: https://orgfarm-18008c4bb2-dev-ed.develop.my.salesforce.com
+2026-04-02 05:41:45 | DEBUG    | src.salesforce.client | Salesforce: POST Lead — attempt 1/3
+2026-04-02 05:41:46 | ERROR    | src.salesforce.lead_manager | LeadManager: Lead creation failed — [400] DUPLICATES_DETECTED: Use one of these records?
+2026-04-02 05:41:46 | ERROR    | src.salesforce.maya_tool | [confirm_lead_creation] Failed — [400] DUPLICATES_DETECTED: Use one of these records? | session=e8278cc6
+2026-04-02 05:47:28 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=93f50af7 intent='purchase_inquiry' name='None None' email='None' phone='None'
+2026-04-02 05:47:28 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=93f50af7 → state=need_name
+2026-04-02 05:47:43 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=93f50af7 intent='purchase_inquiry' name='Roy None' email='None' phone='None'
+2026-04-02 05:47:43 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=93f50af7 → state=need_contact
+2026-04-02 05:47:55 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=93f50af7 intent='purchase_inquiry' name='Roy None' email='test@gmail.com' phone='None'
+2026-04-02 05:47:55 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=93f50af7 → state=need_consent
+2026-04-02 05:50:16 | DEBUG    | src.salesforce.maya_tool | [clear_session_data] Purging stale lead data for session 93f50af7
+2026-04-02 06:51:05 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=289600e7 intent='purchase_inquiry' name='Roy None' email='None' phone='None'
+2026-04-02 06:51:05 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=289600e7 → state=need_contact
+2026-04-02 06:51:20 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=289600e7 intent='purchase_inquiry' name='Roy None' email='gg@tcs.com' phone='None'
+2026-04-02 06:51:20 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=289600e7 → state=need_consent
+2026-04-02 06:51:36 | INFO     | src.salesforce.maya_tool | [confirm_lead_creation] session=289600e7
+2026-04-02 06:51:36 | INFO     | src.salesforce.lead_manager | LeadManager: Classified intent as 'strong_sales'
+2026-04-02 06:51:36 | INFO     | src.salesforce.lead_manager | LeadManager: Decision → create=True | Strong intent + consent given + minimum data present.
+2026-04-02 06:51:36 | DEBUG    | src.salesforce.lead_manager | LeadManager: Submitting Lead payload: {'LastName': 'Roy', 'Company': 'Individual', 'LeadSource': 'Web', 'Status': 'Open - Not Contacted', 'Description': 'Intent: Strong Sales | Summary: My email is gg@tcs.com. | Source: Dyson Voice Bot (Maya)', 'Email': 'gg@tcs.com'}
+2026-04-02 06:51:36 | INFO     | src.salesforce.client | Salesforce: Authenticating via OAuth 2.0 Client Credentials flow...
+2026-04-02 06:51:37 | SUCCESS  | src.salesforce.client | Salesforce: Authenticated successfully. Instance: https://orgfarm-18008c4bb2-dev-ed.develop.my.salesforce.com
+2026-04-02 06:51:38 | DEBUG    | src.salesforce.client | Salesforce: POST Lead — attempt 1/3
+2026-04-02 06:51:39 | SUCCESS  | src.salesforce.client | Salesforce: Lead created — ID: 00QgL00000CVoMbUAL
+2026-04-02 06:51:39 | SUCCESS  | src.salesforce.maya_tool | [confirm_lead_creation] Lead created — SF ID: 00QgL00000CVoMbUAL | session=289600e7
+2026-04-02 06:58:24 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=6a767359 intent='purchase_inquiry' name='None None' email='None' phone='None'
+2026-04-02 06:58:24 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=6a767359 → state=need_name
+2026-04-02 06:58:38 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=6a767359 intent='purchase_inquiry' name='Tuijo None' email='None' phone='None'
+2026-04-02 06:58:38 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=6a767359 → state=need_contact
+2026-04-02 06:58:56 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=6a767359 intent='purchase_inquiry' name='Tuijo None' email='tuijo@gg.com' phone='None'
+2026-04-02 06:58:56 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=6a767359 → state=need_consent
+2026-04-02 06:59:14 | INFO     | src.salesforce.maya_tool | [confirm_lead_creation] session=6a767359
+2026-04-02 06:59:14 | INFO     | src.salesforce.lead_manager | LeadManager: Classified intent as 'strong_sales'
+2026-04-02 06:59:14 | INFO     | src.salesforce.lead_manager | LeadManager: Decision → create=True | Strong intent + consent given + minimum data present.
+2026-04-02 06:59:14 | DEBUG    | src.salesforce.lead_manager | LeadManager: Submitting Lead payload: {'LastName': 'Tuijo', 'Company': 'Individual', 'LeadSource': 'Web', 'Status': 'Open - Not Contacted', 'Description': "Intent: Strong Sales | Summary: It's tuijo@gg.com. | Product of Interest: V15 Detect | Source: Dyson Voice Bot (Maya)", 'Email': 'tuijo@gg.com', 'Industry': 'Technology'}
+2026-04-02 06:59:15 | DEBUG    | src.salesforce.client | Salesforce: POST Lead — attempt 1/3
+2026-04-02 06:59:15 | SUCCESS  | src.salesforce.client | Salesforce: Lead created — ID: 00QgL00000CVp2XUAT
+2026-04-02 06:59:15 | SUCCESS  | src.salesforce.maya_tool | [confirm_lead_creation] Lead created — SF ID: 00QgL00000CVp2XUAT | session=6a767359
+2026-04-02 08:54:04 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=1aa671c3 intent='purchase_inquiry' name='None None' email='None' phone='None'
+2026-04-02 08:54:04 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=1aa671c3 → state=need_name
+2026-04-02 08:54:20 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=1aa671c3 intent='purchase_inquiry' name='Argya None' email='None' phone='None'
+2026-04-02 08:54:20 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=1aa671c3 → state=need_contact
+2026-04-02 08:54:45 | INFO     | src.salesforce.maya_tool | [capture_lead_interest] session=1aa671c3 intent='purchase_inquiry' name='Argya None' email='sinha@gmail.com' phone='None'
+2026-04-02 08:54:45 | DEBUG    | src.salesforce.maya_tool | [capture_lead_interest] session=1aa671c3 → state=need_consent
+2026-04-02 08:56:24 | DEBUG    | src.salesforce.maya_tool | [clear_session_data] Purging stale lead data for session 1aa671c3

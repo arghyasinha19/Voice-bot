@@ -1,0 +1,36 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Arghya\Desktop\Solutions\Voice-BOT\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Arghya\Desktop\Solutions\Voice-BOT
+configfile: pytest.ini
+plugins: anyio-4.13.0, langsmith-0.7.23, asyncio-1.3.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 25 items
+
+tests/test_salesforce.py::TestClassifyIntent::test_purchase_label_maps_to_strong_sales PASSED [  4%]
+tests/test_salesforce.py::TestClassifyIntent::test_callback_label_maps_to_strong_sales PASSED [  8%]
+tests/test_salesforce.py::TestClassifyIntent::test_faq_label_maps_to_informational PASSED [ 12%]
+tests/test_salesforce.py::TestClassifyIntent::test_troubleshooting_maps_to_informational PASSED [ 16%]
+tests/test_salesforce.py::TestClassifyIntent::test_soft_interest_label PASSED [ 20%]
+tests/test_salesforce.py::TestClassifyIntent::test_keyword_buy_triggers_strong_sales PASSED [ 24%]
+tests/test_salesforce.py::TestClassifyIntent::test_keyword_callback_triggers_strong_sales PASSED [ 28%]
+tests/test_salesforce.py::TestClassifyIntent::test_keyword_interested_triggers_soft PASSED [ 32%]
+tests/test_salesforce.py::TestClassifyIntent::test_unknown_intent_defaults_to_informational PASSED [ 36%]
+tests/test_salesforce.py::TestClassifyIntent::test_empty_intent_and_text_defaults_to_informational PASSED [ 40%]
+tests/test_salesforce.py::TestEvaluateLeadDecision::test_informational_never_creates_lead PASSED [ 44%]
+tests/test_salesforce.py::TestEvaluateLeadDecision::test_soft_interest_asks_for_consent PASSED [ 48%]
+tests/test_salesforce.py::TestEvaluateLeadDecision::test_strong_sales_without_consent_asks_for_consent PASSED [ 52%]
+tests/test_salesforce.py::TestEvaluateLeadDecision::test_strong_sales_with_consent_and_complete_data PASSED [ 56%]
+tests/test_salesforce.py::TestEvaluateLeadDecision::test_missing_last_name_blocks_creation PASSED [ 60%]
+tests/test_salesforce.py::TestEvaluateLeadDecision::test_missing_contact_blocks_creation PASSED [ 64%]
+tests/test_salesforce.py::TestEvaluateLeadDecision::test_email_only_satisfies_contact_requirement PASSED [ 68%]
+tests/test_salesforce.py::TestSalesforceClient::test_successful_lead_creation PASSED [ 72%]
+tests/test_salesforce.py::TestSalesforceClient::test_auth_error_on_401 PASSED [ 76%]
+tests/test_salesforce.py::TestSalesforceClient::test_api_error_on_400 PASSED [ 80%]
+tests/test_salesforce.py::TestSalesforceClient::test_network_error_exhausts_retries PASSED [ 84%]
+tests/test_salesforce.py::TestLeadManager::test_informational_intent_skips_creation PASSED [ 88%]
+tests/test_salesforce.py::TestLeadManager::test_strong_sales_with_consent_creates_lead PASSED [ 92%]
+tests/test_salesforce.py::TestLeadManager::test_missing_consent_skips_creation PASSED [ 96%]
+tests/test_salesforce.py::TestLeadManager::test_payload_contains_required_fields PASSED [100%]
+
+============================= 25 passed in 0.10s ==============================

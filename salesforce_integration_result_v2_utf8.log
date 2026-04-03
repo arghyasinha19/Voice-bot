@@ -1,0 +1,4 @@
+﻿--- SALESFORCE INTEGRATION TEST ---
+Attempting to create a test Lead at: https://orgfarm-18008c4bb2-dev-ed.develop.my.salesforce.com
+Success! Created Lead ID: 00QgL00000CU1XdUAL
+Unexpected Error: 'charmap' codec can't encode character '\u2705' in position 21: character maps to <undefined>
